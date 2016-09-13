@@ -80,7 +80,7 @@ console.log(mapURL);
 		  <form onSubmit={this.fetchData}>
 			<label>Get me the weather for
 				<input
-					placeholder={"City, State"}
+					placeholder={"Town, Country"}
 					type="text"
 					value={this.state.location}
 					onChange={this.changeLocation}
