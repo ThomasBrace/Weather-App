@@ -12,7 +12,7 @@ class App extends React.Component {
   	temps: [],
 	locationName: '',
 	locationCountry: '',
-	mapURL: 'https://maps.googleapis.com/maps/api/staticmap?center=59.316669,10.81667&zoom=10&size=1000x1000&key=AIzaSyBf1o19YdDO4daX3BTD2dR2UttcNGSsIJM'
+	mapURL: 'http://maps.googleapis.com/maps/api/staticmap?center=59.316669,10.81667&zoom=10&size=1000x1000&key=AIzaSyBf1o19YdDO4daX3BTD2dR2UttcNGSsIJM'
   };
 
   fetchData = (evt) => {
@@ -20,7 +20,7 @@ class App extends React.Component {
 console.log('got it:', this.state.location);
   	var location = encodeURIComponent(this.state.location);
   	
-  	var urlPrefix = 'https://api.openweathermap.org/data/2.5/forecast?q=';
+  	var urlPrefix = 'http://api.openweathermap.org/data/2.5/forecast?q=';
   	var urlSuffix = '&APPID=ae5d1eaec69ee1c6e5364df12eecf69d&units=metric';
   	var url = urlPrefix + location + urlSuffix;  
 
@@ -43,7 +43,7 @@ console.log(url);
 		var locationName = body.city.name;
 		var locationCountry = body.city.country;
         var coord = body.city.coord.lat + "," + body.city.coord.lon;
-        var mapURLPrefix = 'https://maps.googleapis.com/maps/api/staticmap?center=';
+        var mapURLPrefix = 'http://maps.googleapis.com/maps/api/staticmap?center=';
         var mapURLSuffix = '&zoom=10&size=650x350&key=AIzaSyBf1o19YdDO4daX3BTD2dR2UttcNGSsIJM';
         var mapURL = mapURLPrefix + coord + mapURLSuffix; 
 
